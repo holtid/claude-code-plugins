@@ -11,7 +11,17 @@ In Claude Code, run:
 /plugin install sendify@sendify-claude-plugin
 ```
 
-That's it. The plugin is now available in your project.
+That's it. The plugin is now available in all your projects.
+
+### How it works
+
+There's no central plugin registry. The GitHub repo path **is** the marketplace. When you run the commands above, Claude Code:
+
+1. Fetches this repo from GitHub
+2. Reads `.claude-plugin/marketplace.json` to discover available plugins
+3. Installs the `sendify` plugin to your local Claude Code
+
+You only need to run this once. After that, the plugin is cached and available everywhere.
 
 ## First-Time Setup
 
