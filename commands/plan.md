@@ -24,19 +24,20 @@ Do not proceed until you have a clear feature description.
 
 Launch these agents in parallel to gather context:
 
-**Agent 1: Codebase Explorer (haiku)**
+**Agent 1: Codebase Explorer (opus)**
 - Find similar implementations in the codebase
 - Read CLAUDE.md for project conventions
 - Identify naming patterns and file structure
 - Note test locations and patterns
+- Note internal packages that can be used
 
-**Agent 2: Best Practices Researcher (haiku)**
+**Agent 2: Best Practices Researcher (opus)**
 - Search online for best practices in this domain
 - Find recommended patterns for this type of feature
 - Look for common pitfalls to avoid
 - Note industry standards and conventions
 
-**Agent 3: Standard Library Researcher (haiku)**
+**Agent 3: Standard Library Researcher (opus)**
 - Identify what can be done with standard libraries
 - Prefer standard library solutions over third-party packages
 - For Go: Check `net/http`, `encoding/json`, `context`, `errors`
@@ -190,10 +191,32 @@ After generating the plan, end with:
 
 ## Next Steps
 
+Plan saved to: `.plan/[feature-name].md`
+
 1. Review this plan and provide feedback
 2. Ask questions to clarify any section
 3. Request changes (simplify, add detail, adjust scope)
-4. When ready, ask the user to run `/sendify:work [path-to-plan]` to start the work.
+4. When ready, run `/sendify:work .plan/[feature-name].md` to execute
+```
+
+## Save Plan to File
+
+After generating the plan and getting user approval:
+
+1. **Create `.plan` directory** if it doesn't exist
+2. **Save plan** as `.plan/[feature-name].md` (kebab-case filename)
+3. **Check gitignore:**
+   - Read `.gitignore` in project root
+   - If `.plan` or `.plan/` is NOT listed, ask the user:
+     > "The `.plan` directory is not in `.gitignore`. Would you like me to add it?"
+   - If user agrees, add `.plan/` to `.gitignore`
+
+**Example:**
+```
+.plan/
+├── user-authentication.md
+├── export-metrics.md
+└── dark-mode-toggle.md
 ```
 
 ## Guidelines
