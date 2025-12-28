@@ -28,7 +28,7 @@ Follow these steps precisely:
 
 3. **Summarize changes**: Launch a sonnet agent to read the files/diff and return a summary of the changes.
 
-4. **Parallel review**: Launch 4 agents in parallel to independently review. Each agent returns a list of issues with description and category (e.g., "CLAUDE.md violation", "bug", "logic error", "simplicity").
+4. **Parallel review**: Launch 5 agents in parallel to independently review. Each agent returns a list of issues with description and category (e.g., "CLAUDE.md violation", "bug", "logic error", "simplicity", "power-of-ten").
 
    **Agent 1**: CLAUDE.md compliance (sonnet)
    Audit changes for CLAUDE.md compliance. Only consider CLAUDE.md files that share a path with the file or its parents.
@@ -39,8 +39,11 @@ Follow these steps precisely:
    **Agent 3**: Logic/Security review (opus)
    Look for security issues, incorrect logic, edge cases. Only flag issues in the changed code.
 
-   **Agent 4**: Simplicity scan (opus)
+   **Agent 4**: Simplicity scan (haiku)
    Ensure code changes are as simple and minimal as possible. Only flag issues in the changed code.
+
+   **Agent 5**: Power of Ten review (haiku)
+   Review code against NASA/JPL's "Power of Ten" safety-critical coding rules. Only flag issues in the changed code.
 
    **CRITICAL: HIGH SIGNAL issues only:**
    - Objective bugs that will cause incorrect behavior at runtime
@@ -55,7 +58,7 @@ Follow these steps precisely:
 
    If uncertain, do not flag it.
 
-5. **Validate issues**: For each issue from agents 2, 3 and 4, launch a parallel validation agent. The validator confirms the issue is real with high confidence by checking the actual code. Use opus for bugs, logic/security, and simplicity issues; sonnet for CLAUDE.md violations.
+5. **Validate issues**: For each issue from agents 2, 3, 4 and 5, launch a parallel validation agent. The validator confirms the issue is real with high confidence by checking the actual code. Use opus for bugs, logic/security, simplicity, and power-of-ten issues; sonnet for CLAUDE.md violations.
 
 6. **Filter**: Remove any issues not validated in step 5.
 
@@ -116,4 +119,5 @@ No issues found. Checked for bugs and CLAUDE.md compliance.
 - For Go files, the go-review agent should be used
 - For TypeScript files, the ts-review agent should be used
 - For simplicity the code-simplicity-reviewer agent should be used
+- For Power of Ten review the power-of-ten-reviewer agent should be used
 - Cite CLAUDE.md rules when flagging violations
