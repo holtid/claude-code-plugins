@@ -28,17 +28,7 @@ This command takes a work document (plan, specification, or todo file) and execu
    - Get user approval to proceed
    - **Do not skip this** - better to ask questions now than build the wrong thing
 
-2. **Setup Environment**
-   **Live work on current branch**
-   ```bash
-   git checkout develop && git pull origin develop
-   git checkout -b feature-branch-name
-   ```
-
-
-
-
-3. **Create Todo List**
+2. **Create Todo List**
    - Use TodoWrite to break plan into actionable tasks
    - Include dependencies between tasks
    - Prioritize based on what needs to be done first
@@ -87,7 +77,7 @@ This command takes a work document (plan, specification, or todo file) and execu
 
 1. **Run Core Quality Checks**
 
-   Always run before submitting:
+   Always run before completing:
 
    ```bash
    # Go backend
@@ -122,78 +112,11 @@ This command takes a work document (plan, specification, or todo file) and execu
    - Code follows existing patterns
    - No console errors or warnings
 
-### Phase 4: Ship It
+### Phase 4: Complete
 
-1. **Create Commit**
-
-   ```bash
-   git add .
-   git status  # Review what's being committed
-   git diff --staged  # Check the changes
-
-   # Commit with conventional format
-   git commit -m "$(cat <<'EOF'
-   feat(scope): description of what and why
-
-   Brief explanation if needed.
-
-   🤖 Generated with [Claude Code](https://claude.com/claude-code)
-
-   Co-Authored-By: Claude <noreply@anthropic.com>
-   EOF
-   )"
-   ```
-
-2. **Capture and Upload Screenshots for UI Changes** (REQUIRED for any UI work)
-
-   For **any** design changes, new views, or UI modifications, you MUST capture and upload screenshots:
-
-   **Step 1: Start dev server** (if not running)
-   ```bash
-   # Start your dev server (e.g., go run, yarn dev, docker-compose up)
-   ```
-
-   **Step 2: Capture screenshots with Playwright MCP tools**
-   - `browser_navigate` to go to affected pages
-   - `browser_resize` to set viewport (desktop or mobile as needed)
-   - `browser_snapshot` to verify page state
-   - `browser_take_screenshot` to capture images
-
-   **What to capture:**
-   - **New screens**: Screenshot of the new UI
-   - **Modified screens**: Before AND after screenshots
-
-3. **Create Pull Request**
-
-   ```bash
-   git push -u origin feature-branch-name
-
-   gh pr create --title "Feature: [Description]" --body "$(cat <<'EOF'
-   ## Summary
-   - What was built
-   - Why it was needed
-   - Key decisions made
-
-   ## Testing
-   - Tests added/modified
-   - Manual testing performed
-
-   ## Before / After Screenshots
-   | Before | After |
-   |--------|-------|
-   | ![before](URL) | ![after](URL) |
-
-   ## Figma Design
-   [Link if applicable]
-
-   🤖 Generated with [Claude Code](https://claude.com/claude-code)
-   EOF
-   )"
-   ```
-
-4. **Notify User**
+1. **Notify User**
    - Summarize what was completed
-   - Link to PR
+   - List any files created or modified
    - Note any follow-up work needed
    - Suggest next steps if applicable
 
@@ -223,7 +146,7 @@ This command takes a work document (plan, specification, or todo file) and execu
 
 - Follow existing patterns
 - Write tests for new code
-- Run linting before pushing
+- Run linting before completing
 - Use reviewer agents for complex/risky changes only
 
 ### Ship Complete Features
@@ -234,16 +157,13 @@ This command takes a work document (plan, specification, or todo file) and execu
 
 ## Quality Checklist
 
-Before creating PR, verify:
+Before marking implementation complete:
 
 - [ ] All clarifying questions asked and answered
 - [ ] All TodoWrite tasks marked completed
 - [ ] Tests pass (`go test ./...` and/or `yarn test`)
 - [ ] Linting passes (per CLAUDE.md)
 - [ ] Code follows existing patterns
-- [ ] Before/after screenshots captured (for UI changes)
-- [ ] Commit messages follow conventional format
-- [ ] PR description includes summary, testing notes, and screenshots
 
 ## When to Use Reviewer Agents
 
