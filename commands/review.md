@@ -16,12 +16,9 @@ Thorough code review using specialized agents for bug detection, security, and s
 
 ### Step 1: Determine Scope & Get Diff
 
-Determine what to review based on arguments:
-- **No args** (default): Branch commits vs main
-- **`--staged`**: Staged changes only
-- **File paths**: Specific files (e.g., `/review src/api/handler.go src/api/handler_test.go`)
-- **Commit range**: `/review main..HEAD` or `/review {commit1}...{commit2}`
-- **Single commit**: `/review abc123def456`
+Review all new commits on current branch compared to develop. If no arguments provided, use `git diff develop...HEAD` to get all changed files.
+
+If arguments provided, review those instead (staged changes, specific files, commit ranges, or single commits).
 
 If no changes found, ask user what to review.
 
