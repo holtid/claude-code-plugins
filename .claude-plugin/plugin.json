@@ -7,15 +7,15 @@
   },
   "keywords": ["logistics", "shipping", "go", "typescript", "react"],
   "commands": [
-    "./commands/review.md",
-    "./commands/blueprint.md",
-    "./commands/build.md",
-    "./commands/commit.md"
+    "./.claude-plugin/commands/review.md",
+    "./.claude-plugin/commands/blueprint.md",
+    "./.claude-plugin/commands/build.md",
+    "./.claude-plugin/commands/commit.md"
   ],
   "agents": [
-    "./agents/code-simplicity-reviewer.md",
-    "./agents/power-of-ten-reviewer.md"
+    "./.claude-plugin/agents/code-simplicity-reviewer.md",
+    "./.claude-plugin/agents/power-of-ten-reviewer.md"
   ],
-  "lspServers": "./.lsp.json",
-  "mcpServers": "./.mcp.json"
+  "lspServers": "./.claude-plugin/.lsp.json",
+  "mcpServers": "./.claude-plugin/.mcp.json"
 }
