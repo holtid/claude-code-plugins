@@ -17,13 +17,26 @@ Internal Claude Code plugin for Sendify employees. This plugin provides MCP serv
 - `.opencode/` - OpenCode configuration (mirrors Claude plugin functionality)
 - `Makefile` - Installation commands for both platforms
 
-## Commands
+## Installation
 
 ```bash
 make install           # Install for Claude Code and OpenCode
 make claude-install    # Claude Code only
 make opencode-install  # OpenCode only
 ```
+
+## Skills & Commands
+
+### Skills
+
+- `/sendify:explore` - Research standard library solutions, best practices, and codebase patterns before planning
+- `/sendify:power-of-ten-go` - NASA/JPL Power of Ten rules for safety-critical Go code
+- `/sendify:power-of-ten-ts` - NASA/JPL Power of Ten rules for safety-critical TypeScript/React code
+
+### Commands
+
+- `/sendify:review` - Multi-agent code review for finding bugs and issues
+- `/sendify:commit` - Create a git commit with proper formatting
 
 ## MCP Servers
 
