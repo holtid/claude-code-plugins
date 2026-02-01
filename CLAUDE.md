@@ -13,13 +13,18 @@ Personal Claude Code plugin by Holger Tidemand. Provides MCP servers, code revie
 
 ## Structure
 
-- `plugin.json` - Plugin manifest
-- `marketplace.json` - Marketplace configuration
-- `.mcp.json` - MCP server configurations
-- `.lsp.json` - LSP server configurations
-- `agents/` - Custom agent definitions
-- `skills/` - Skill definitions
-- `Makefile` - Installation commands
+```
+.claude-plugin/
+  marketplace.json        # Marketplace configuration
+plugins/
+  holgis/
+    plugin.json           # Plugin manifest
+    .mcp.json             # MCP server configurations
+    .lsp.json             # LSP server configurations
+    agents/               # Custom agent definitions
+    skills/               # Skill definitions
+Makefile                  # Installation commands
+```
 
 ## Installation
 

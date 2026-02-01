@@ -1,8 +1,8 @@
 .PHONY: help install uninstall update
 
-MARKETPLACE = holtid/claude-code-plugin
-MARKETPLACE_NAME = claude-code-plugin
-PLUGIN = holgis@claude-code-plugin
+MARKETPLACE = holtid/claude-code-plugins
+MARKETPLACE_NAME = claude-code-plugins
+PLUGIN = holgis@claude-code-plugins
 
 help:
 	@echo "Holgis Plugin Management"

@@ -1,13 +1,13 @@
 #!/bin/bash
 set -e
 
-PLUGIN_JSON="plugin.json"
+PLUGIN_JSON="plugins/holgis/plugin.json"
 
 # Only bump if plugin.json exists
 [ -f "$PLUGIN_JSON" ] || exit 0
 
 # Check if any plugin files are staged (excluding plugin.json itself to avoid loops)
-staged_plugin_files=$(git diff --cached --name-only -- 'agents/' 'skills/' '.mcp.json' '.lsp.json' | head -1 || true)
+staged_plugin_files=$(git diff --cached --name-only -- 'plugins/holgis/agents/' 'plugins/holgis/skills/' 'plugins/holgis/.mcp.json' 'plugins/holgis/.lsp.json' | head -1 || true)
 
 # Exit if no plugin files are staged
 [ -n "$staged_plugin_files" ] || exit 0

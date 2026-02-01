@@ -1,12 +1,13 @@
 {
-  "name": "claude-code-plugin",
+  "name": "claude-code-plugins",
+  "description": "Personal Claude Code plugin with code review tools, safety-critical coding guidelines, and logistics management",
   "owner": {
     "name": "Holger Tidemand"
   },
   "plugins": [
     {
       "name": "holgis",
-      "source": "..",
+      "source": "./plugins/holgis",
       "description": "Personal plugin with code review tools, safety-critical coding guidelines, and logistics management"
     }
   ]
