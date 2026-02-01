@@ -64,11 +64,6 @@ After installation, authenticate with Sendify MCP:
 | **Playwright** | Browser automation |
 | **Figma** | Design system integration |
 
-### Sendify Admin Tools
-
-- `get_search_log` - Debug product/carrier availability
-- `get_failed_booking_logs` - Analyze booking failures
-
 ## Skills
 
 Safety-critical coding guidelines adapted from NASA/JPL's "Power of Ten":
