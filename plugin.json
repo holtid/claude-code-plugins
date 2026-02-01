@@ -1,11 +1,11 @@
 {
-  "name": "sendify",
-  "description": "Sendify Claude Code Plugin",
+  "name": "holgis",
+  "description": "Personal Claude Code plugin by Holger Tidemand",
   "version": "1.0.16",
   "author": {
     "name": "Holger Tidemand"
   },
-  "keywords": ["logistics", "shipping", "go", "typescript", "react"],
+  "keywords": ["go", "typescript", "react", "code-review", "logistics"],
   "skills": [
     "./skills/commit/SKILL.md",
     "./skills/review/SKILL.md",

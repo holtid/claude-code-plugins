@@ -1,6 +1,6 @@
-# Sendify AI Plugin
+# Holgis AI Plugin
 
-Internal Claude Code plugin for Sendify employees.
+Personal Claude Code plugin by Holger Tidemand.
 
 ## Quick Start
 
@@ -20,7 +20,7 @@ make install
 Or manually:
 ```bash
 claude plugin marketplace add holtid/ai-plugins
-claude plugin install sendify@ai-plugins
+claude plugin install holgis@ai-plugins
 ```
 
 Enable auto-updates via `/plugin` > Marketplaces > ai-plugins > Enable auto-update.
@@ -43,16 +43,16 @@ After installation, authenticate with Sendify MCP:
 
 | Command | Description |
 |---------|-------------|
-| `/sendify:review` | Multi-agent code review (bugs, security, simplicity, Power of Ten) |
-| `/sendify:explore` | Research solutions and patterns before planning |
-| `/sendify:commit` | Create git commits |
+| `/holgis:review` | Multi-agent code review (bugs, security, simplicity, Power of Ten) |
+| `/holgis:explore` | Research solutions and patterns before planning |
+| `/holgis:commit` | Create git commits |
 
 ### Review Examples
 
 ```
-/sendify:review                     # Review changes vs develop branch
-/sendify:review src/api/handler.go  # Review specific files
-/sendify:review HEAD~3              # Review last 3 commits
+/holgis:review                     # Review changes vs develop branch
+/holgis:review src/api/handler.go  # Review specific files
+/holgis:review HEAD~3              # Review last 3 commits
 ```
 
 ## MCP Servers
@@ -73,8 +73,8 @@ After installation, authenticate with Sendify MCP:
 
 Safety-critical coding guidelines adapted from NASA/JPL's "Power of Ten":
 
-- `/sendify:power-of-ten-go` - Go-specific rules
-- `/sendify:power-of-ten-ts` - TypeScript/React rules
+- `/holgis:power-of-ten-go` - Go-specific rules
+- `/holgis:power-of-ten-ts` - TypeScript/React rules
 
 ## LSP Servers
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About
 
-Internal Claude Code plugin for Sendify employees. This plugin provides MCP servers and configurations for working with Sendify codebases.
+Personal Claude Code plugin by Holger Tidemand. Provides MCP servers, code review tools, and safety-critical coding guidelines.
 
 ## Tech Stack
 
@@ -31,11 +31,11 @@ make update     # Update plugin
 
 ## Skills
 
-- `/sendify:commit` - Create a git commit with proper formatting
-- `/sendify:review` - Multi-agent code review for finding bugs and issues
-- `/sendify:explore` - Research standard library solutions, best practices, and codebase patterns before planning
-- `/sendify:power-of-ten-go` - NASA/JPL Power of Ten rules for safety-critical Go code
-- `/sendify:power-of-ten-ts` - NASA/JPL Power of Ten rules for safety-critical TypeScript/React code
+- `/holgis:commit` - Create a git commit with proper formatting
+- `/holgis:review` - Multi-agent code review for finding bugs and issues
+- `/holgis:explore` - Research standard library solutions, best practices, and codebase patterns before planning
+- `/holgis:power-of-ten-go` - NASA/JPL Power of Ten rules for safety-critical Go code
+- `/holgis:power-of-ten-ts` - NASA/JPL Power of Ten rules for safety-critical TypeScript/React code
 
 ## MCP Servers
 

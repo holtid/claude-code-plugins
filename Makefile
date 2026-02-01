@@ -2,7 +2,7 @@
 
 MARKETPLACE = holtid/ai-plugins
 MARKETPLACE_NAME = ai-plugins
-PLUGIN = sendify@ai-plugins
+PLUGIN = holgis@ai-plugins
 
 help:
 	@echo "Sendify Plugin Management"

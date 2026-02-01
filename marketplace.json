@@ -1,13 +1,13 @@
 {
   "name": "ai-plugins",
   "owner": {
-    "name": "Sendify"
+    "name": "Holger Tidemand"
   },
   "plugins": [
     {
-      "name": "sendify",
+      "name": "holgis",
       "source": ".",
-      "description": "Internal Sendify plugin with code review tools, safety-critical coding guidelines, and logistics management"
+      "description": "Personal plugin with code review tools, safety-critical coding guidelines, and logistics management"
     }
   ]
 }
